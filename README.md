@@ -1,6 +1,6 @@
 # Mask Detection Project
 
-A deep learning project to recognize and highlight masked/unmasked human faces using the [Mask RCNN](https://github.com/matterport/Mask_RCNN) architecture and [Real World Masked Face Dataset](https://github.com/X-zhangyang/Real-World-Masked-Face-Dataset).
+A deep learning project to recognize and highlight masked/unmasked human faces using the [Mask RCNN](https://github.com/matterport/Mask_RCNN) architecture on Python 3, Keras and TensorFlow and [Real World Masked Face Dataset](https://github.com/X-zhangyang/Real-World-Masked-Face-Dataset).
 
 ## Contributing
 
