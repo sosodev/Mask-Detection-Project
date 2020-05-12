@@ -4,6 +4,12 @@ A deep learning project to recognize and highlight masked/unmasked human faces u
 
 ## [Download Trained Model Weights](https://f000.backblazeb2.com/file/cs497-datasets/mask_rcnn_masked_faces.h5)
 
+## Running The Server
+
+* Install [Docker](https://docs.docker.com/get-docker/)
+* Build with `docker build . -t detection-server`
+* Run with `docker run -p 5000:5000 --rm detection-server`
+
 ## Contributing
 
 * Create a fork (or branch if you're a contributor) of the project
