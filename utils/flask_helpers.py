@@ -14,13 +14,12 @@ def image_from_request(request):
     Output:
         image: PIL image, the image attached to the request
     """
-    for key in request.files.keys():
-        attached_file = request.files[key]
-        try:
-            image = Image.open(attached_file.stream)
-            return image
-        except:
-            print('Error loading image: {}'.format(attached_file.filename))
+    attached_file = request.files['image']
+    try:
+        image = Image.open(attached_file.stream)
+        return image
+    except:
+        print('Error loading image: {}'.format(attached_file.filename))
     
     return None
 

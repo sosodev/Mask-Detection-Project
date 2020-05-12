@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import mrcnn.model as modellib
 import utils.flask_helpers as fh
 
-from flask import Flask, request, Response
+from flask import Flask, request, Response, render_template
 from mrcnn import visualize
 from utils.model import InferenceConfig
 from io import BytesIO
@@ -15,16 +15,16 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    return 'Hello, world!'
+    return render_template('index.html')
 
 @app.route('/visualize', methods=['POST'])
 def visualize_image():
+    image = fh.image_from_request(request)
+    image = fh.image_to_array(image)
+
     K.clear_session()
     model = modellib.MaskRCNN(mode="inference", config=inference_config, model_dir='.')
     model.load_weights('mask_rcnn_masked_faces.h5', by_name=True)
-
-    image = fh.image_from_request(request)
-    image = fh.image_to_array(image)
 
     results = model.detect([image], verbose=1)
     r = results[0]

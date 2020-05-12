@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>CS497 - Mask Detection Server</title>
+
+        <style>
+            .container {
+                margin: 0 auto;
+                padding: 2%;
+            }
+
+            h1 {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+                width: 50%;
+                height: 75px;
+                justify-content: space-between;
+            }
+
+            input {
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>
+                Upload an image and the server will attempt to label masked/unmasked people
+            </h1>
+            <form enctype="multipart/form-data" method="POST" action="visualize">
+                <input type="file" name="image" accept=".jpg, .jpeg, .png" multiple>
+                <button type="submit">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </body>
+</html>

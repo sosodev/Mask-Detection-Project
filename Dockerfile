@@ -9,6 +9,7 @@ RUN pip install -r requirements.txt
 
 COPY server.py /app/server.py
 COPY utils /app/utils
+COPY templates /app/templates
 
 ENV FLASK_APP=server.py
 
