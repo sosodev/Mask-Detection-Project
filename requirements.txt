@@ -1,6 +1,6 @@
 flask
 tensorflow==1.15
-keras==2.2.2
+keras==2.2.5
 mask-rcnn-12rics
 numpy
 scikit-image
