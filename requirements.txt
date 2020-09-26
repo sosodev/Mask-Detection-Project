@@ -1,5 +1,5 @@
 flask
-tensorflow==1.15.2
+tensorflow==1.15.4
 keras==2.2.5
 mask-rcnn-12rics
 numpy
